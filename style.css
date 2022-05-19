@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    width: 100%;
+    height: 100vh;;
+    background-image: url("https://wallpapercave.com/wp/wp8984777.png");
+    background-size: cover;
+    background-position: center;
+   
+}
+.instruction{
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    top: 20%;
+    left: 5%;
+    background-color:rgba(40, 57, 102, 0.829);
+    box-shadow: 0px 0px 5px white;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+}
+.instruction h2{
+    margin: 5px 5px;
+    color: white;
+    text-shadow: 1px 1px rgb(107, 221, 202);
+    font-size: 25px;
+}
+.instruction p{
+    line-height: 25px;
+    text-shadow: 0px 1px rgb(107, 221, 202);
+    font-size: 20px;
+    color: white;
+}
+.blurred_box{
+    top: 20%;
+    left: 40%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color:rgba(40, 57, 102, 0.429);
+    box-shadow: -2px -2px 2px rgba(40, 57, 102, 0.529);
+    font-family: Arial, Helvetica, serif;
+    font-weight: 500;
+    color: whitesmoke;
+}
+img{
+    height: 100px;
+    width: 100px;
+    padding-left: 40px;
+}
+ul{
+    padding-top: 10px;
+}
+.name{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: serif;
+
+}
+.blurred_box li{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    padding-top: 10px;
+}
+a{
+    padding: 5px;
+    cursor: pointer;
+    color: rgb(107, 221, 202);
+    border: 2px solid rgb(107, 221, 202);
+    font-size: 22px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+a:before{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-25deg) translateX(0);
+    transition: none;
+
+}
+a:hover{
+    color: #fff;
+    background-color: rgb(107, 221, 202);
+    border-bottom: 4px solid rgb(107, 221, 202);
+    transform: skewX(-10deg) translateX(.5em) translateY(.2em);
+    box-shadow: 2px 2px whitesmoke;
+}
+a:active{
+    margin: 1px;
+    box-shadow: 0px 0px;
+    transition: .1s ease-in-out;
+}
+
+
+section{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+.game_title{
+    font-size: 80px;
+    -webkit-text-stroke: 5px black;
+    color: rgb(107, 221, 202);
+
+}
+.information2{
+    padding: 5px;
+    font-weight: 700;
+    
+    -webkit-text-stroke: .5px black;
+    cursor: pointer;
+    color: rgb(107, 221, 202);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(107, 221, 202);
+    font-size: 22px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.game_container{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    width: 430px;
+    height: 420px;
+    margin: 0px auto;
+    background-color: rgba(40, 57, 102, 0.829);
+    color:rgba(40, 57, 102, 0.529);
+}
+.cell{
+    width: 100px;
+    height: 97px;
+    box-shadow: 2px black;
+    border: 4px solid black;
+    color: white;
+    font-family: serif;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 65px;
+}
+
+.upper-message{
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.information3{
+    margin-top: -10px;
+    padding: 5px;
+    font-weight: 700;
+    -webkit-text-stroke: .5px black;
+    cursor: pointer;
+    color: rgb(107, 221, 202);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(107, 221, 202);
+    margin-right: 5px;
+    font-size: 22px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+#winning-message{
+    margin: 5px 10px;
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(107, 221, 202);
+    text-shadow: 1px 1px 2px black;
+    border: 2px inset rgb(107, 221, 202);
+    border-radius: 10px 15px 10px 15px;
+    background-color: white;
+    
+}
