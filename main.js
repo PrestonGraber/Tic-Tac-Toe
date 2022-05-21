@@ -39,8 +39,6 @@ statusDisplay.innerHTML = currentPlayerTurn();
 /*Functions i Will be using to make tic tac toe operational*/
 function handleCellPlayed(){
     /*updating internal game state and UI*/
-
-        AI();
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
 }
@@ -88,8 +86,9 @@ function handleCellClick(clickedCellEvent){
 
     /*Grabbing data-cell-index attribute from clicked, it returns string so we use a parseint to turn to integer*/
      clickedCellIndex = parseInt(clickedCell.getAttribute("data-cell-index"));
-
-    /*cehcking whether the cell has already been played or if game is paused*/
+     
+    
+    /*checking whether the cell has already been played or if game is paused*/
         if(gameState[clickedCellIndex] != "" || !gameActive){
             return;
         }
@@ -98,10 +97,6 @@ function handleCellClick(clickedCellEvent){
     handelResultValidation();
 
 }
-function AI(){
-    
-   
-  }
 
 function handleRestartGame(){
     gameActive = true;;
@@ -111,7 +106,6 @@ function handleRestartGame(){
     }
     gameState = ["","","","","","","","","","","","","","","","",]
     statusDisplay.innerHTML = currentPlayerTurn();
-    console.log("works");
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 
 }
