@@ -39,17 +39,46 @@ statusDisplay.innerHTML = currentPlayerTurn();
 /*Functions i Will be using to make tic tac toe operational*/
 function handleCellPlayed(){
     /*updating internal game state and UI*/
+
+        AI();
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
-
 }
 function handlePlayerChange(){
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    console.log(currentPlayer);
     statusDisplay.innerHTML = currentPlayerTurn();
-
 }
 function handelResultValidation(){
+    let roundWon = false;
+    
+        for(let i = 0; i <= 9;i++){
+            const winCondition = winningConditions[i];
+            let a = gameState[winCondition[0]];
+            let b = gameState[winCondition[1]];
+            let c = gameState[winCondition[2]];
+            let d = gameState[winCondition[3]];
+
+            if(a === '' || b === '' || c === '' || d === ''){
+                continue;
+            }
+            if( a === b && b === c && c === d){
+                roundWon = true;
+                break;
+            }
+        }
+        if(roundWon){
+            statusDisplay.innerHTML = winningMessage();
+            gameActive = false;
+            return;
+        }
+        /* now checking to see if there are any array values still not populated DRAW*/
+        let roundDraw = !gameState.includes("");
+        if(roundDraw){
+            statusDisplay.innerHTML = drawMessage();
+            gameActive = false; 
+            return;
+        }
+
     handlePlayerChange();
 }
 function handleCellClick(clickedCellEvent){
@@ -69,9 +98,23 @@ function handleCellClick(clickedCellEvent){
     handelResultValidation();
 
 }
+function AI(){
+    
+   
+  }
+
 function handleRestartGame(){
+    gameActive = true;;
+    currentPlayer = "X";
+    for(let i = 0; i <= 15; i++){
+        gameState[i] = "";
+    }
+    gameState = ["","","","","","","","","","","","","","","","",]
+    statusDisplay.innerHTML = currentPlayerTurn();
+    console.log("works");
+    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 
 }
 /*Adding event listener to game cells*/
 document.querySelectorAll(".cell").forEach(cell => cell.addEventListener("click",handleCellClick));
-document.querySelector(".information3").addEventListener("click",handleRestartGame);
+document.querySelector('.game--restart').addEventListener('click', handleRestartGame);

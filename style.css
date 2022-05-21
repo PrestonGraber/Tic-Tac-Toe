@@ -20,7 +20,7 @@
     box-shadow: 0px 0px 5px white;
     justify-content: center;
     width: 300px;
-    height: 300px;
+    height: 200px;
 }
 .instruction h2{
     margin: 5px 5px;
@@ -29,7 +29,7 @@
     font-size: 25px;
 }
 .instruction p{
-    line-height: 25px;
+    line-height: 30px;
     text-shadow: 0px 1px rgb(107, 221, 202);
     font-size: 20px;
     color: white;
@@ -42,10 +42,10 @@
     justify-content: center;
     align-items: top;
     width: 250px;
-    height: 300px;
+    height: 250px;
     padding: 10px;
     border-radius: 2px;
-    background-color:rgba(40, 57, 102, 0.429);
+    background-color:rgba(40, 57, 102, 0.529);
     box-shadow: -2px -2px 2px rgba(40, 57, 102, 0.529);
     font-family: Arial, Helvetica, serif;
     font-weight: 500;
@@ -76,6 +76,7 @@ a{
     cursor: pointer;
     color: rgb(107, 221, 202);
     border: 2px solid rgb(107, 221, 202);
+    margin-right: 5px;
     font-size: 22px;
     text-align: center;
     transition: all 0.3s ease-in-out;
@@ -117,7 +118,6 @@ section{
 .information2{
     padding: 5px;
     font-weight: 700;
-    
     -webkit-text-stroke: .5px black;
     cursor: pointer;
     color: rgb(107, 221, 202);
@@ -157,23 +157,7 @@ section{
     align-items: center;
     justify-content: center;
 }
-.information3{
-    margin-top: -10px;
-    padding: 5px;
-    font-weight: 700;
-    -webkit-text-stroke: .5px black;
-    cursor: pointer;
-    color: rgb(107, 221, 202);
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: whitesmoke;
-    border: 2px solid rgb(107, 221, 202);
-    margin-right: 5px;
-    font-size: 22px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
-}
+
 #winning-message{
     margin: 5px 10px;
     font-size: 30px;
